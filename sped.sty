@@ -1,0 +1,148 @@
+\makeatletter
+
+% sectioning
+%% \global\def\section{\@startsection {section}{1}{\z@}%
+%%                                    {2ex \@plus 1ex \@minus .1ex}%
+%%                                    {1ex \@plus.2ex}%
+%%                                    {\normalfont\bfseries\scshape\fontsize{11}{13}\selectfont}}
+%% \global\def\subsection{\@startsection{subsection}{2}{\z@}%
+%%                                      {2ex\@plus 1ex \@minus .1ex}%
+%%                                      {1ex \@plus .2ex}%
+%%                                      {\normalfont\bfseries\fontsize{11}{13}\selectfont}}
+%% \global\def\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+%%                                      {2ex\@plus 1ex \@minus .1ex}%
+%%                                      {1ex \@plus .2ex}%
+%%                                      {\normalfont\itshape\fontsize{11}{13}\selectfont}}
+
+
+% \@maketitle fix -- less vertical space at top
+%% \global\def\@maketitle{%
+%%   \newpage
+%%   \begin{center}%
+%%   \let \footnote \thanks
+%%   \null
+%%     \vskip -.2em%
+%%     {\LARGE \@title \par}%
+%%     \vskip 1em%
+%%     {\large
+%%       \lineskip .5em%
+%%       \begin{tabular}[t]{c}%
+%%         \@author
+%%       \end{tabular}\par}%
+%%     \vskip 1em%
+%%     {\large \@date}%
+%%   \end{center}%
+%%   \par
+%%   \vskip 1em}
+
+% New \itemize
+\def\itemize{%
+  \ifnum \@itemdepth >\thr@@\@toodeep\else
+    \advance\@itemdepth\@ne
+    \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}%
+    \expandafter
+    \list
+      \csname\@itemitem\endcsname
+      {\def\makelabel##1{\hss\llap{##1}}
+	\ifdim\leftmargin=22.5pt\leftmargin\z@\fi
+        \advance\leftmargin\parindent%
+	\labelwidth\leftmargin%
+      }%
+  \fi}
+\let\enditemize\endlist
+
+\def\paritemize{%
+    \list{\textbullet}{%
+        \leftmargin\z@
+	\labelwidth\z@
+	\listparindent\parindent
+	\itemindent1.35\parindent
+	\parsep\z@
+    }%
+}
+\let\endparitemize\endlist
+
+%%%%%
+% Subscript fun
+
+\newcommand{\cpp}[1]{\texttt{#1}}
+\newcommand{\unix}[1]{\texttt{#1}}
+\newcommand{\tool}[1]{\textit{#1}}
+\newcommand{\musec}{\mbox{$\mu$s}}
+
+\newcommand{\LB}{\char`\{}
+\newcommand{\RB}{\char`\}}
+
+%\newcommand{\abbrev}[1]{\textsc{\lowercase{#1}}}
+\newcommand{\abbrev}[1]{#1}
+\newcommand{\IP}{\abbrev{IP}}
+\newcommand{\TCP}{\abbrev{TCP}}
+\newcommand{\UDP}{\abbrev{UDP}}
+\newcommand{\ICMP}{\abbrev{ICMP}}
+%\newcommand{\TCPIP}{\abbrev{TCP$/$IP}}
+%\newcommand{\UDPIP}{\abbrev{UDP$/$IP}}
+\newcommand{\TCPIP}{\abbrev{TCP$\kern-.08em/$IP}}
+\newcommand{\UDPIP}{\abbrev{UDP$\kern-.08em/$IP}}
+\newcommand{\DSCP}{\abbrev{DSCP}}
+\newcommand{\ARP}{\abbrev{ARP}}
+\newcommand{\FTP}{\abbrev{FTP}}
+\newcommand{\NAT}{\abbrev{NAT}}
+\newcommand{\SYN}{\abbrev{SYN}}
+\newcommand{\FIN}{\abbrev{FIN}}
+\newcommand{\RST}{\abbrev{RST}}
+\newcommand{\ACK}{\abbrev{ACK}}
+
+\newcommand{\Tcl}{T\kern-\p@ cl}
+\newcommand{\Mbitps}{Mbit/s}
+
+\renewcommand{\v}[1]{{\textit{#1}}}
+
+% \caption fixes
+\ifx\abovecaptionskip\@undefined
+  \newskip\abovecaptionskip
+  \newskip\belowcaptionskip
+\fi
+\abovecaptionskip=0.1\baselineskip
+\belowcaptionskip=0.5\baselineskip
+\long\def\@makecaption#1#2#3{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\footnotesize\textbf{#1}---#2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\begin{footnotesize}\textbf{#1}---#2\par\end{footnotesize}}
+  \else
+    \global \@minipagefalse
+    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+
+% URL macro
+{\catcode`\/\active\catcode`\_\active\catcode`\.\active
+\gdef\URLslash{\futurelet\next\@@URLslash}%
+\gdef\@@URLslash{\ifx\next\URLslash\char`\/\else\slash\fi}%
+\gdef\URLdot{\char`\.\penalty\exhyphenpenalty}%
+\gdef\URLprepare{\catcode`\/\active\catcode`\_\active\catcode`\.\active
+        \let/\URLslash\let.\URLdot\def~{\char`\~}\def_{\char`\_}}}%
+\gdef\URL{\bgroup\URLprepare\realURL}%
+\gdef\realURL#1{\tt #1\egroup}%
+
+% smalltt
+\newenvironment{smalltt}
+{\begin{small}\begin{alltt}}
+{\end{alltt}\end{small}}
+
+% snackcode
+\newenvironment{snackcode}
+{\endgraf\vskip-\lastskip\begingroup\frenchspacing\begin{scriptsize}\def\{{\char`\{}\def\}{\char`\}}\advance\@totalleftmargin5pt\vspace{-0.06in}\begin{alltt}}
+{\end{alltt}\end{scriptsize}\vspace{-0.06in}\endgroup}
+
+\newenvironment{snackcodex}
+{\endgraf\vskip-\lastskip\begingroup\frenchspacing\begin{scriptsize}\def\{{\char`\{}\def\}{\char`\}}\advance\@totalleftmargin10pt\vspace{-2.5mm}\begin{alltt}}
+{\end{alltt}\end{scriptsize}\vspace{-6mm}\endgroup}
+
+{\catcode`\_\active
+\gdef\snack@prepare{\catcode`\_\active\def_{\char`\_}}%
+\gdef\snack{\bgroup\snack@prepare\@snack}
+\gdef\@snack#1{\small\frenchspacing\texttt{#1}\egroup}}%
+
+\makeatother
+\endinput

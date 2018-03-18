@@ -17,8 +17,6 @@ prog_base = os.path.split(sys.argv[0])[1]   # Name of this program
 
 logger = logging.getLogger("my_logger")
 chrome_pid = None
-chrome_out = None
-chrome_err = None
 
 ############### globa variables end ############
 
@@ -53,36 +51,79 @@ def terminate_chrome_instance():
     
 def startup_chrome_instance(fout, ferr):
     global chrome_pid
-    chrome_start_cmd = "/usr/bin/google-chrome --headless --disable-gpu --disable-extensions --disable-component-extensions-with-background-pages --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
+    chrome_start_cmd = "/usr/bin/google-chrome --headless --disable-extensions --disable-component-extensions-with-background-pages --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
     logger.info("Starting Chrome with command \"%s\"" % chrome_start_cmd)
     chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), stdout=fout, stderr=ferr, shell=False)
     time.sleep(10)
     logger.info("Chrome is running")
 
-def retrieve_video_urls(start_counter, total_counter, websites, wdir):
-    step = 50
+def get_video_urls(start_counter, total_counter, websites, wdir):
+    search_step = 50
+    url_history = {}
 
-    counter = 0
-    max_counter = 10
-    for line in lines:
-        #print line
-        if counter == max_counter:
-            break
+    # TODO - If file exists start from the checkpoint
+    url_history_file = open(wdir+"/video_urls.txt", "w+")
 
-        if line[1].startswith("-"):
-            continue
-    
-        results = subprocess.check_output(["googler/googler", "--noprompt", "--nocolor", "--json", "-V", "-s", "100", "--count", "100", "-w", line[1], ""])
-        results = json.loads(results)
-        for res in results:
-            g.write(res['url']+"\n")
+    # Collect total_counter urls for each website
+    for website in websites:
+        url_history[website] = set()
+        buffer_list = []
+        logger.info("Retrieving video urls for %s" % website)
 
-        counter += 1
+        counter = 0
+        search_base = start_counter
+        while True:
+            if counter == total_counter:
+                break
+        
+            # Blocking operation, we can parallelize the retrieval with threads or Popen, later on
+            googler_cmd = "googler/googler --noprompt --nocolor --json -V --start %s --count %s -w %s \"\"" % (search_base, search_step, website)
+            #results = subprocess.check_output(["googler/googler", "--noprompt", "--nocolor", "--json", "-V", "-s", str(search_base), "--count", str(search_step), "-w", website[1], ""])
+            results = subprocess.check_output(shlex.split(googler_cmd))
+            results = json.loads(results)
+            for res in results:
+                if counter == total_counter:
+                    break
+                if res['url'] not in url_history[website]:
+                    url_history[website].add(res['url'])
+                    buffer_list.append(res['url'])
+                    if (len(buffer_list) == search_step):
+                        for url in buffer_list:
+                            url_history_file.write(url+"\n")
+                        buffer_list = []
+                    counter += 1
+            search_base += search_step
 
-    g.close()
-    exit()
+        for url in buffer_list:
+            url_history_file.write(url+"\n")
+        
+    url_history_file.close()
+    return url_history
 
+def get_network_requests(website_video_urls, wdir):    
+    for website in website_video_urls: 
+        website_dir = wdir + "/" + website
+        if not os.path.exists(website_dir):
+            try:
+                os.makedirs(website_dir)
+            except OSError as e:
+                if e.errno != errno.EEXIST:
+                    raise
+                logger.warn("%s already exists" % website_dir)
+                pass
 
+        for url in website_video_urls[website]:
+            tmp_website = website[website.find("www.")+4:]
+            print tmp_website
+            log_filename = url[url.find(tmp_website)+len(tmp_website)+1:].replace("/", "_")
+            print log_filename
+            network_log = open(website_dir + "/" + log_filename, "w+")
+            nodejs_cmd = "node get_network.js %s" % url
+            nodejs_pid = subprocess.Popen(shlex.split(nodejs_cmd), stdout = network_log, shell = False)
+            nodejs_pid.wait()
+            network_log.close()
+
+    return []
 
 def main():
     # Configure command line option parser
@@ -121,11 +162,6 @@ def main():
             logger.warn("%s already exists" % options.wdir)
             pass
 
-    # Start chrome instanc
-    fout = open(options.wdir+"/chrome.out", "w+")
-    ferr = open(options.wdir+"/chrome.err", "w+")
-    startup_chrome_instance(fout, ferr)
-
     # Get the websites
     websites = []
     with open(options.file, "r") as data_file:    
@@ -134,13 +170,21 @@ def main():
             tmp = line.replace("\n", "").split()
             if tmp[1].startswith("-"):
                 logger.warn("Skipped website %s" % tmp[1])
-                websites.append(tmp)
+                continue
+            websites.append(tmp[1])
 
     # Retrieve video urls
+    website_video_urls = get_video_urls(options.start_counter, options.total_counter, websites[:2], options.wdir)
 
+    # Start chrome instanc
+    fout = open(options.wdir+"/chrome.out", "w+")
+    ferr = open(options.wdir+"/chrome.err", "w+")
+    startup_chrome_instance(fout, ferr)
+    
     # Retrieve files from network and filter for .m3u8 .mpd .
+    master_files = get_network_requests(website_video_urls, options.wdir)
 
-    time.sleep(30)
+    #time.sleep(30)
     terminate_chrome_instance()
     fout.close()
     ferr.close()

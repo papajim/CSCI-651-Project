@@ -8,6 +8,7 @@ import json
 import subprocess
 import signal
 import shlex
+import requests
 from optparse import OptionParser
 
 ############### global variables ############### 
@@ -51,29 +52,47 @@ def terminate_chrome_instance():
     
 def startup_chrome_instance(fout, ferr):
     global chrome_pid
-    chrome_start_cmd = "/usr/bin/google-chrome --headless --disable-extensions --disable-component-extensions-with-background-pages --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
+    #chrome_start_cmd = "/usr/bin/google-chrome --headless --disable-extensions --disable-component-extensions-with-background-pages --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
+    chrome_start_cmd = "/usr/bin/google-chrome --headless --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
     logger.info("Starting Chrome with command \"%s\"" % chrome_start_cmd)
     chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), stdout=fout, stderr=ferr, shell=False)
-    time.sleep(10)
+    time.sleep(5)
     logger.info("Chrome is running")
 
 def get_video_urls(start_counter, total_counter, websites, wdir):
     search_step = 50
     url_history = {}
+    url_history_file = None
 
-    # TODO - If file exists start from the checkpoint
-    url_history_file = open(wdir+"/video_urls.txt", "w+")
+    # If file exists start from the checkpoint
+    url_history_filename = wdir + "/video_urls.txt"
+    if os.path.isfile(url_history_filename):
+        with open(url_history_filename, "r") as f:
+            lines = f.readlines()
+            for line in lines:
+                tmp = line.split()
+                if tmp[0] in url_history:
+                    url_history[tmp[0]].add(tmp[1])
+                else:
+                    url_history[tmp[0]] = set([tmp[1]])
+        url_history_file = open(url_history_filename, "a")
+    else:
+        url_history_file = open(url_history_filename, "w+")
 
     # Collect total_counter urls for each website
     for website in websites:
-        url_history[website] = set()
+        if not website in url_history:
+            counter = 0
+            url_history[website] = set()
+        else:
+            counter = len(url_history[website])
+
         buffer_list = []
         logger.info("Retrieving video urls for %s" % website)
 
-        counter = 0
         search_base = start_counter
         while True:
-            if counter == total_counter:
+            if counter >= total_counter:
                 break
         
             # Blocking operation, we can parallelize the retrieval with threads or Popen, later on
@@ -89,18 +108,19 @@ def get_video_urls(start_counter, total_counter, websites, wdir):
                     buffer_list.append(res['url'])
                     if (len(buffer_list) == search_step):
                         for url in buffer_list:
-                            url_history_file.write(url+"\n")
+                            url_history_file.write(website + "\t" + url + "\n")
                         buffer_list = []
                     counter += 1
             search_base += search_step
 
         for url in buffer_list:
-            url_history_file.write(url+"\n")
+            url_history_file.write(website + "\t" + url + "\n")
         
     url_history_file.close()
     return url_history
 
-def get_network_requests(website_video_urls, wdir):    
+def get_network_requests(website_video_urls, wdir):
+    masterfile_urls = []
     for website in website_video_urls: 
         website_dir = wdir + "/" + website
         if not os.path.exists(website_dir):
@@ -114,16 +134,37 @@ def get_network_requests(website_video_urls, wdir):
 
         for url in website_video_urls[website]:
             tmp_website = website[website.find("www.")+4:]
-            print tmp_website
-            log_filename = url[url.find(tmp_website)+len(tmp_website)+1:].replace("/", "_")
-            print log_filename
-            network_log = open(website_dir + "/" + log_filename, "w+")
-            nodejs_cmd = "node get_network.js %s" % url
+            log_filename_base = website_dir + "/" + url[url.find(tmp_website)+len(tmp_website)+1:].replace("/", "_")
+            log_filename = log_filename_base + ".out"
+            
+            if os.path.isfile(log_filename) and (os.stat(log_filename).st_size > 0):
+                logger.info("%s already crawled" % log_filename)
+                continue
+
+            logger.debug(log_filename)
+            network_log = open(log_filename, "w+")
+            nodejs_cmd = "node my_network.js %s" % url
             nodejs_pid = subprocess.Popen(shlex.split(nodejs_cmd), stdout = network_log, shell = False)
             nodejs_pid.wait()
             network_log.close()
 
-    return []
+            with open(log_filename, "r") as f:
+                lines = f.readlines()
+                for line in lines:
+                    if ".m3u8" in line:
+                        masterfile_urls.append(line)
+                        response = requests.get(line)
+                        with open(log_filename_base+".m3u8", "w+") as g:
+                            g.write(response.text)
+                        break
+                    elif ".mpd" in line:
+                        masterfile_urls.append(line)
+                        response = requests.get(line)
+                        with open(log_filename_base+".m3u8", "w+") as g:
+                            g.write(response.text)
+                        break
+
+    return masterfile_urls
 
 def main():
     # Configure command line option parser
@@ -181,8 +222,11 @@ def main():
     ferr = open(options.wdir+"/chrome.err", "w+")
     startup_chrome_instance(fout, ferr)
     
-    # Retrieve files from network and filter for .m3u8 .mpd .
-    master_files = get_network_requests(website_video_urls, options.wdir)
+    # Retrieve files from network and filter for .m3u8 .mpd and flash
+    # Dumps the raw network exchange in files and retrieved m3u8 or mpd master files
+    masterfile_urls = get_network_requests(website_video_urls, options.wdir)
+
+    print masterfile_urls
 
     #time.sleep(30)
     terminate_chrome_instance()

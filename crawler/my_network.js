@@ -7,9 +7,16 @@ process.argv.forEach(function (val, index, array) {
     }
 });
 
-CDP((client) => {
+//CDP().on('error', (err) => {
+//   console.error('Cannot connect to remote endpoint:', err);
+//});
+
+CDP.New().then((target) => {
+   return CDP({target});
+}).then((client) => {
     // extract domains
     const {Network, Page} = client;
+    // get tab id
     const id = client.target.id;
     // setup handlers
     Network.requestWillBeSent((params) => {
@@ -17,10 +24,9 @@ CDP((client) => {
     });
     Page.loadEventFired(() => {
         setTimeout(function(){
-           console.log("TAB_ID_IS: " + id);
-           //CDP.Close({id});
+           CDP.Close({id});
            client.close();
-         }, 4000);
+         }, 15000);
     });
     // enable events then start!
     Promise.all([
@@ -32,7 +38,5 @@ CDP((client) => {
         console.error(`ERROR: ${err.message}`);
         client.close();
     });
-}).on('error', (err) => {
-    console.error('Cannot connect to remote endpoint:', err);
 });
 

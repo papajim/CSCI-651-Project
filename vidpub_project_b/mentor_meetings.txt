@@ -1,0 +1,5 @@
+Meeting 1: General discussion about video streaming techniques and ways to retrieve video URLs.
+Meeting 2: Discussion about how to select the set of video publishers and which publishers catergories we should focus on.
+Meeting 3: Issue with Google search api! Limitation on search domains and number of queries. Possible solution is a tool called Googler.
+Meeting 4: Discussion about the specific streaming techniques we are going to target in the study. Among the 4 popular techniques HLS, MPEG-DASH, HDS, Smooth Streaming we are going to focus on HLS, MPEG-DASH and HDS.
+Meeting 5: Discussion about the crawler implementation and the manifest file retrieval.

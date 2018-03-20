@@ -96,7 +96,7 @@ def get_video_urls(start_counter, total_counter, websites, wdir):
                 break
         
             # Blocking operation, we can parallelize the retrieval with threads or Popen, later on
-            googler_cmd = "googler/googler --noprompt --nocolor --json -V --start %s --count %s -w %s \"\"" % (search_base, search_step, website)
+            googler_cmd = "googler --noprompt --nocolor --json -V --start %s --count %s -w %s \"\"" % (search_base, search_step, website)
             #results = subprocess.check_output(["googler/googler", "--noprompt", "--nocolor", "--json", "-V", "-s", str(search_base), "--count", str(search_step), "-w", website[1], ""])
             results = subprocess.check_output(shlex.split(googler_cmd))
             results = json.loads(results)

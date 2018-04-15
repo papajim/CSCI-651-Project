@@ -1,21 +1,20 @@
 2	www.cnn.com/videos
 3	www.nytimes.com/video
-4	www.theguardian.com
-5	news.google.com
 6	www.bbc.co.uk
-7	www.washingtonpost.com
-8	www.indiantimes.com
-9	news.yahoo.com
+7	-www.washingtonpost.com
+8	-www.indiantimes.com
 10	www.foxnews.com
 11	www.weather.com
-12	www.forbes.com
-13	-www.shutterstock.com (vimeo)
 14	www.huffingtonpost.com
-15 	www.accuweather.com
-16 	www.usatoday.com
 17 	www.bloomberg.com
 19 	www.cnbc.com
+15 	-www.accuweather.com
+16 	www.usatoday.com
 20 	www.wsj.com
+
+
+12	www.forbes.com
+13	-www.shutterstock.com (vimeo)
 21 	www.reuters.com
 22 	www.time.com
 23 	-www.wunderground.com

@@ -1,0 +1,77 @@
+1	www.espn.com
+2	www.cricbuzz.com
+5	www.nbcolympics.com
+7	www.nba.com
+11	www.cbssports.com
+12	www.nhl.com
+14	www.premierleague.com
+17	www.skysports.com
+31	www.wwe.com
+39	www.eurosport.com
+1000 www.fifa.com
+
+15	www.olympic.org
+19	www.nbcsports.com
+21	-www.pyeongchang2018.com (youtube)
+22	www.si.com
+23	www.nfl.com
+24	-www.cbc.ca (region locked)
+26	-www.sbnation.com (youtube)
+35	-www.filgoal.com (youtube)
+37	-www.tsn.ca (region locked)
+40	www.football365.com
+42	www.uefa.com
+44	www.sherdog.com
+46	-www.motorsport.com (youtube)
+47	www.foxsports.com
+48	-www.fifa.com (flash player)
+49	www.maxpreps.com
+53	www.pgatour.com
+57	crossfit.com
+58	www.atpworldtour.com
+59	www.sportingnews.com
+60	www.pinkbike.com
+66	www.ncaa.com
+67	www.active.com
+68	www.olympicchannel.com
+69	www.golfchannel.com (nbc ?)
+70	-www.t-nation.com (youtube)
+72	www.runnersworld.com
+74	www.realmadrid.com
+76	www.formula1.com
+79	www.manutd.com
+82	www.teamusa.org
+85	www.nascar.com
+87	www.surfline.com
+88	www.muscleandfitness.com
+90	www.mmajunkie.com
+91	www.cricket.com.au
+95	www.scout.com
+96	www.mlb.com
+97	www.sport360.com
+99	www.mlssoccer.com
+100	www.latimes.com
+102	www.autosport.com
+107	www.givemesport.com
+110	www.afl.com.au
+114	-www.fis-ski.com (youtube)
+113	-www.cyclingnews.com (dailymotion)
+118	www.golfdigest.com
+122	-www.mixedmartialarts.com (dailymotion)
+131	www.chicagotribune.com
+132	www.milb.com
+133	independent.co.uk
+134	-www.magicseaweed.com (live, vimeo)
+138	www.wtatennis.com
+147	www.sportinglife.com
+152	www.tennis.com
+153	snowboarding.transworld.net
+154	www.euroleague.net
+155	-www.rotowire.com (vimeo)
+159	www.iplt20.com
+161	www.nrl.com
+166	www.bcci.tv
+175	www.bicycling.com
+180	www.teamtalk.com
+200	www.europeantour.com
+213	www.ironman.com

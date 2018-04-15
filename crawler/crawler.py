@@ -53,14 +53,15 @@ def terminate_chrome_instance():
 def startup_chrome_instance(fout, ferr):
     global chrome_pid
     #chrome_start_cmd = "/usr/bin/google-chrome --headless --disable-extensions --disable-component-extensions-with-background-pages --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
-    chrome_start_cmd = "/usr/bin/google-chrome --headless --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
+    #chrome_start_cmd = "/usr/bin/google-chrome --headless --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
+    chrome_start_cmd = "/usr/bin/google-chrome --headless --v=1 --remote-debugging-port=9222"
     logger.info("Starting Chrome with command \"%s\"" % chrome_start_cmd)
     chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), stdout=fout, stderr=ferr, shell=False)
     time.sleep(5)
     logger.info("Chrome is running")
 
 def get_video_urls(start_counter, total_counter, websites, wdir):
-    search_step = 50
+    search_step = 100
     url_history = {}
     url_history_file = None
 
@@ -112,6 +113,7 @@ def get_video_urls(start_counter, total_counter, websites, wdir):
                         buffer_list = []
                     counter += 1
             search_base += search_step
+            time.sleep(10) #pace search
 
         for url in buffer_list:
             url_history_file.write(website + "\t" + url + "\n")
@@ -134,7 +136,8 @@ def get_network_requests(website_video_urls, wdir):
 
         for url in website_video_urls[website]:
             tmp_website = website[website.find("www.")+4:]
-            log_filename_base = website_dir + "/" + url[url.find(tmp_website)+len(tmp_website)+1:].replace("/", "_")
+            #log_filename_base = website_dir + "/" + url[url.find(tmp_website)+len(tmp_website)+1:].replace("/", "_")
+            log_filename_base = website_dir + "/" + url[url.rfind("/")+1:]
             log_filename = log_filename_base + ".out"
             
             if os.path.isfile(log_filename) and (os.stat(log_filename).st_size > 0):
@@ -160,7 +163,7 @@ def get_network_requests(website_video_urls, wdir):
                     elif ".mpd" in line:
                         masterfile_urls.append(line)
                         response = requests.get(line)
-                        with open(log_filename_base+".m3u8", "w+") as g:
+                        with open(log_filename_base+".mpd", "w+") as g:
                             g.write(response.text)
                         break
 
@@ -215,7 +218,7 @@ def main():
             websites.append(tmp[1])
 
     # Retrieve video urls
-    website_video_urls = get_video_urls(options.start_counter, options.total_counter, websites[:2], options.wdir)
+    website_video_urls = get_video_urls(options.start_counter, options.total_counter, websites, options.wdir)
 
     # Start chrome instanc
     fout = open(options.wdir+"/chrome.out", "w+")

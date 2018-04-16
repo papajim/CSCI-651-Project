@@ -56,7 +56,8 @@ def startup_chrome_instance(fout, ferr):
     #chrome_start_cmd = "/usr/bin/google-chrome --headless --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
     chrome_start_cmd = "/usr/bin/google-chrome --headless --v=1 --remote-debugging-port=9222"
     logger.info("Starting Chrome with command \"%s\"" % chrome_start_cmd)
-    chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), stdout=fout, stderr=ferr, shell=False)
+    #chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), stdout=fout, stderr=ferr, shell=False)
+    chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), shell=False)
     time.sleep(5)
     logger.info("Chrome is running")
 
@@ -166,6 +167,12 @@ def get_network_requests(website_video_urls, wdir):
                         with open(log_filename_base+".mpd", "w+") as g:
                             g.write(response.text)
                         break
+                    elif ".f4m" in line:
+                        masterfile_urls.append(line)
+                        response = requests.get(line)
+                        with open(log_filename_base+".f4m", "w+") as g:
+                            g.write(response.text)
+                        break
 
     return masterfile_urls
 
@@ -216,7 +223,7 @@ def main():
                 logger.warn("Skipped website %s" % tmp[1])
                 continue
             websites.append(tmp[1])
-
+    
     # Retrieve video urls
     website_video_urls = get_video_urls(options.start_counter, options.total_counter, websites, options.wdir)
 

@@ -54,10 +54,11 @@ def startup_chrome_instance(fout, ferr):
     global chrome_pid
     #chrome_start_cmd = "/usr/bin/google-chrome --headless --disable-extensions --disable-component-extensions-with-background-pages --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
     #chrome_start_cmd = "/usr/bin/google-chrome --headless --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
-    chrome_start_cmd = "/usr/bin/google-chrome --headless --v=1 --remote-debugging-port=9222"
+    #chrome_start_cmd = "/usr/bin/google-chrome --headless --v=1 --remote-debugging-port=9222"
+    chrome_start_cmd = "/usr/bin/google-chrome --disk-cache-size=1 --enable-logging --v=1 --remote-debugging-port=9222"
     logger.info("Starting Chrome with command \"%s\"" % chrome_start_cmd)
-    #chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), stdout=fout, stderr=ferr, shell=False)
-    chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), shell=False)
+    chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), stdout=fout, stderr=ferr, shell=False)
+    #chrome_pid = subprocess.Popen(shlex.split(chrome_start_cmd), shell=False)
     time.sleep(5)
     logger.info("Chrome is running")
 
@@ -124,7 +125,8 @@ def get_video_urls(start_counter, total_counter, websites, wdir):
 
 def get_network_requests(website_video_urls, wdir):
     masterfile_urls = []
-    for website in website_video_urls: 
+    for website in website_video_urls:
+        counter = 0
         website_dir = wdir + "/" + website
         if not os.path.exists(website_dir):
             try:
@@ -156,23 +158,28 @@ def get_network_requests(website_video_urls, wdir):
                 lines = f.readlines()
                 for line in lines:
                     if ".m3u8" in line:
+                        counter += 1
                         masterfile_urls.append(line)
                         response = requests.get(line)
                         with open(log_filename_base+".m3u8", "w+") as g:
                             g.write(response.text)
                         break
                     elif ".mpd" in line:
+                        counter += 1
                         masterfile_urls.append(line)
                         response = requests.get(line)
                         with open(log_filename_base+".mpd", "w+") as g:
                             g.write(response.text)
                         break
                     elif ".f4m" in line:
+                        counter += 1
                         masterfile_urls.append(line)
                         response = requests.get(line)
                         with open(log_filename_base+".f4m", "w+") as g:
                             g.write(response.text)
                         break
+            if counter >= 30:
+                break
 
     return masterfile_urls
 

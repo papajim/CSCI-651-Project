@@ -10,7 +10,7 @@
 20 	www.wsj.com/video
 1	www.espn.com/video
 2	-www.cricbuzz.com
-5	www.nbcolympics.com/video
+5	-www.nbcolympics.com/video
 7	www.nba.com
 11	www.cbssports.com
 12	www.nhl.com/video
@@ -18,4 +18,4 @@
 17	www.skysports.com/watch/video
 31	www.wwe.com/videos
 39	video.eurosport.com
-1000 www.fifa.com
+1000 -www.fifa.com

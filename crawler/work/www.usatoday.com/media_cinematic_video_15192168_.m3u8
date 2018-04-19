@@ -1,0 +1,3 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2000
+http://king-vh.akamaihd.net/i/video/15192168/15192168_,350,640,1000,2000,.mp4.csmil/master.m3u8?videoId=3826133468001

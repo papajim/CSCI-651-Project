@@ -138,13 +138,18 @@ def get_network_requests(website_video_urls, wdir):
                 pass
 
         for url in website_video_urls[website]:
+            if counter >= 30:
+                break
+
             tmp_website = website[website.find("www.")+4:]
-            #log_filename_base = website_dir + "/" + url[url.find(tmp_website)+len(tmp_website)+1:].replace("/", "_")
-            log_filename_base = website_dir + "/" + url[url.rfind("/")+1:]
+            log_filename_base = website_dir + "/" + url[url.find(tmp_website)+len(tmp_website)+1:].replace("/", "_")
+            #log_filename_base = website_dir + "/" + url[url.rfind("/")+1:]
             log_filename = log_filename_base + ".out"
             
             if os.path.isfile(log_filename) and (os.stat(log_filename).st_size > 0):
                 logger.info("%s already crawled" % log_filename)
+                if os.path.isfile(log_filename_base+".m3u8") or os.path.isfile(log_filename_base+".mpd") or os.path.isfile(log_filename_base+".f4m"):
+                    counter += 1
                 continue
 
             logger.debug(log_filename)
@@ -178,8 +183,6 @@ def get_network_requests(website_video_urls, wdir):
                         with open(log_filename_base+".f4m", "w+") as g:
                             g.write(response.text)
                         break
-            if counter >= 30:
-                break
 
     return masterfile_urls
 

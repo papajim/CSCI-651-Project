@@ -26,7 +26,7 @@ CDP.New().then((target) => {
         setTimeout(function(){
            CDP.Close({id});
            client.close();
-         }, 40000);
+         }, 45000);
     });
     // enable events then start!
     Promise.all([

@@ -1,0 +1,15 @@
+#EXTM3U
+#EXT-X-STREAM-INF:BANDWIDTH=208578,AVERAGE-BANDWIDTH=143625,RESOLUTION=320x180,CODECS="avc1.66.30, mp4a.40.2"
+http://foxnews-f.akamaihd.net/i/102213/102213_411_jameson_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/index_0_av.m3u8?set-akamai-hls-revision=5%0A
+#EXT-X-STREAM-INF:BANDWIDTH=496255,AVERAGE-BANDWIDTH=293920,RESOLUTION=480x268,CODECS="avc1.66.30, mp4a.40.2"
+http://foxnews-f.akamaihd.net/i/102213/102213_411_jameson_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/index_1_av.m3u8?set-akamai-hls-revision=5%0A
+#EXT-X-STREAM-INF:BANDWIDTH=786241,AVERAGE-BANDWIDTH=458054,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2"
+http://foxnews-f.akamaihd.net/i/102213/102213_411_jameson_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/index_2_av.m3u8?set-akamai-hls-revision=5%0A
+#EXT-X-STREAM-INF:BANDWIDTH=1196075,AVERAGE-BANDWIDTH=908532,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2"
+http://foxnews-f.akamaihd.net/i/102213/102213_411_jameson_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/index_3_av.m3u8?set-akamai-hls-revision=5%0A
+#EXT-X-STREAM-INF:BANDWIDTH=1749242,AVERAGE-BANDWIDTH=1375636,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2"
+http://foxnews-f.akamaihd.net/i/102213/102213_411_jameson_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/index_4_av.m3u8?set-akamai-hls-revision=5%0A
+#EXT-X-STREAM-INF:BANDWIDTH=2881526,AVERAGE-BANDWIDTH=2255385,RESOLUTION=1280x720,CODECS="avc1.66.30, mp4a.40.2"
+http://foxnews-f.akamaihd.net/i/102213/102213_411_jameson_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/index_5_av.m3u8?set-akamai-hls-revision=5%0A
+#EXT-X-STREAM-INF:BANDWIDTH=53000,CODECS="mp4a.40.2"
+http://foxnews-f.akamaihd.net/i/102213/102213_411_jameson_FNC_,XLOW,LOW,MED_LOW,MED,HIGH,HD,.mp4.csmil/index_0_a.m3u8?set-akamai-hls-revision=5%0A

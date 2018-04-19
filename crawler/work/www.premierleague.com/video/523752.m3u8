@@ -1,0 +1,17 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=511000,RESOLUTION=480x270
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662180720001&pubId=2508689025001&videoId=5662175788001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=793000,RESOLUTION=640x360
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662178671001&pubId=2508689025001&videoId=5662175788001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=990000,RESOLUTION=640x360
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662180845001&pubId=2508689025001&videoId=5662175788001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1290000,RESOLUTION=960x540
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662180275001&pubId=2508689025001&videoId=5662175788001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1815000,RESOLUTION=960x540
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662180454001&pubId=2508689025001&videoId=5662175788001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2610000,RESOLUTION=1280x720
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662180735001&pubId=2508689025001&videoId=5662175788001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3645000,RESOLUTION=1920x1080
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662181465001&pubId=2508689025001&videoId=5662175788001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3948000,RESOLUTION=1920x1080
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5662180878001&pubId=2508689025001&videoId=5662175788001

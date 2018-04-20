@@ -1,2 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?><Error><Code>InvalidObjectName</Code><Message>The specified object name is not valid.</Message><Details>Disallowed unicode characters present in object name ''video-media/hls/2017/11/07/74601_1_360-bloopers_wg/master.m3u8
-''</Details></Error>
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=7134426,RESOLUTION=2160x1080,FRAME-RATE=29.970,CODECS="avc1.4d401f,mp4a.40.2"
+index-f1-v1-a1.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1070431,RESOLUTION=848x424,FRAME-RATE=29.970,CODECS="avc1.4d401f,mp4a.40.2"
+index-f2-v1-a1.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1072282,RESOLUTION=1440x720,FRAME-RATE=29.970,CODECS="avc1.4d401f,mp4a.40.2"
+index-f3-v1-a1.m3u8
+
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=466837,RESOLUTION=2160x1080,CODECS="avc1.4d401f",URI="iframes-f1-v1-a1.m3u8"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=95271,RESOLUTION=848x424,CODECS="avc1.4d401f",URI="iframes-f2-v1-a1.m3u8"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=115850,RESOLUTION=1440x720,CODECS="avc1.4d401f",URI="iframes-f3-v1-a1.m3u8"

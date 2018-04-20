@@ -1,2 +1,5 @@
-<?xml version='1.0' encoding='UTF-8'?><Error><Code>InvalidObjectName</Code><Message>The specified object name is not valid.</Message><Details>Disallowed unicode characters present in object name ''video-media/2007/12/24/2369_a1_wg_school_hls/video.m3u8
-''</Details></Error>
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1558233,RESOLUTION=640x480,FRAME-RATE=30.000,CODECS="avc1.4d401e,mp4a.40.2"
+index-v1-a1.m3u8
+
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=130623,RESOLUTION=640x480,CODECS="avc1.4d401e",URI="iframes-v1-a1.m3u8"

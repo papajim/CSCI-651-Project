@@ -1,1 +1,11 @@
-Not found
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=706800,CODECS="avc1.4d0015,mp4a.40.2",RESOLUTION=512x288
+http://cdn2hls-vh.akamaihd.net/i/wwe/2012/wm28_preshow/wm28_preshow_,1280x720,960x540,768x432,640x360,512x288,.mp4.csmil/index_4_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=982800,CODECS="avc1.4d001e,mp4a.40.2",RESOLUTION=640x360
+http://cdn2hls-vh.akamaihd.net/i/wwe/2012/wm28_preshow/wm28_preshow_,1280x720,960x540,768x432,640x360,512x288,.mp4.csmil/index_3_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1162800,CODECS="avc1.4d001e,mp4a.40.2",RESOLUTION=768x432
+http://cdn2hls-vh.akamaihd.net/i/wwe/2012/wm28_preshow/wm28_preshow_,1280x720,960x540,768x432,640x360,512x288,.mp4.csmil/index_2_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1882800,CODECS="avc1.4d001f,mp4a.40.2",RESOLUTION=960x540
+http://cdn2hls-vh.akamaihd.net/i/wwe/2012/wm28_preshow/wm28_preshow_,1280x720,960x540,768x432,640x360,512x288,.mp4.csmil/index_1_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=3682800,CODECS="avc1.64001f,mp4a.40.2",RESOLUTION=1280x720
+http://cdn2hls-vh.akamaihd.net/i/wwe/2012/wm28_preshow/wm28_preshow_,1280x720,960x540,768x432,640x360,512x288,.mp4.csmil/index_0_av.m3u8

@@ -1,1 +1,15 @@
-{"timestamp":1524077481577,"status":404,"error":"Not Found","message":"No message available","path":"/wssmobile/v1/video/cc/android/WiFi/VOD_Akamai/JBNaUxKsT1ugMfLWeU~pQA.m3u8%0A"}
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=725000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://vodproduseast-vh.akamaihd.net/i/m/NjQ3Nzk0NQ/Ol2o4KpH6OE0NYEj15RrGsU1GI6coOmNR.fIhdfoNP9lNzQ4/dmdfbrill1009full_,70,15,24,44,120,180,240,0.mp4.csmil/index_0_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=193000,RESOLUTION=240x134,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://vodproduseast-vh.akamaihd.net/i/m/NjQ3Nzk0NQ/Ol2o4KpH6OE0NYEj15RrGsU1GI6coOmNR.fIhdfoNP9lNzQ4/dmdfbrill1009full_,70,15,24,44,120,180,240,0.mp4.csmil/index_1_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=280000,RESOLUTION=320x180,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://vodproduseast-vh.akamaihd.net/i/m/NjQ3Nzk0NQ/Ol2o4KpH6OE0NYEj15RrGsU1GI6coOmNR.fIhdfoNP9lNzQ4/dmdfbrill1009full_,70,15,24,44,120,180,240,0.mp4.csmil/index_2_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=473000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://vodproduseast-vh.akamaihd.net/i/m/NjQ3Nzk0NQ/Ol2o4KpH6OE0NYEj15RrGsU1GI6coOmNR.fIhdfoNP9lNzQ4/dmdfbrill1009full_,70,15,24,44,120,180,240,0.mp4.csmil/index_3_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1209000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://vodproduseast-vh.akamaihd.net/i/m/NjQ3Nzk0NQ/Ol2o4KpH6OE0NYEj15RrGsU1GI6coOmNR.fIhdfoNP9lNzQ4/dmdfbrill1009full_,70,15,24,44,120,180,240,0.mp4.csmil/index_4_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1791000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://vodproduseast-vh.akamaihd.net/i/m/NjQ3Nzk0NQ/Ol2o4KpH6OE0NYEj15RrGsU1GI6coOmNR.fIhdfoNP9lNzQ4/dmdfbrill1009full_,70,15,24,44,120,180,240,0.mp4.csmil/index_5_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2375000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://vodproduseast-vh.akamaihd.net/i/m/NjQ3Nzk0NQ/Ol2o4KpH6OE0NYEj15RrGsU1GI6coOmNR.fIhdfoNP9lNzQ4/dmdfbrill1009full_,70,15,24,44,120,180,240,0.mp4.csmil/index_6_av.m3u8

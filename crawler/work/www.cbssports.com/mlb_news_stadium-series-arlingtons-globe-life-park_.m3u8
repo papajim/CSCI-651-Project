@@ -1,61 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script type='text/javascript' src='https://sports.cbsimg.net/js/jquery/jquery.1.8.2.min.js'></script>
-<script class="hsljs" src="https://sports.cbsimg.net/js/hlsjs/hls.light.min.js"></script>
-</head>
-<body>
-
-<script>
-$(function() {
-
-    var video = $('.flexVideo.lite .video').get(0);
-
-    if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(decodeURIComponent('https://cbssportsdc-i.akamaihd.net/hls/live/518856/dc_1/master-250.m3u8
-'));
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED,function() {
-            video.play();
-        });
-    }
-    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = 'https://cbssportsdc-i.akamaihd.net/hls/live/518856/dc_1/master-250.m3u8
-';
-        video.addEventListener('canplay',function() {
-            video.play();
-        });
-    }
-});
-</script>
-
-<style>
-body {
-    background-color: transparent !important;
-}
-.flexVideo {
-    width: 100%;
-    height: 0;
-    display: block;
-    position: relative;
-    padding-bottom: 56.25%;
-}
-
-.flexVideo .video {
-    pointer-events: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
-</style>
-
-<div class="flexVideo lite">
-    <video class="video" muted playsinline autoplay></video>
-</div>
-
-</body>
-</html>
-<!-- Page build info: WtefNAoZUrgAAEwQQUU 'ws5471.tm.cbsig.net' 19472 20180418 15:40:36 /spln/local/media/cache/full/spln/854/%2Fvideo%2Fplayer%2Fembed%2Flite%3Fu%3Dhttps%3A%2F%2Fcbssportsdc-i.akamaihd.net%2Fhls%2Flive%2F518856%2Fdc_1%2Fmaster-250.m3u8%0A -->
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:7
+#EXT-X-MEDIA-SEQUENCE:10450
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=28.161,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00450.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=34.167,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00451.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=40.173,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00452.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=46.179,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00453.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=52.185,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00454.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=58.191,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00455.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=64.197,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00456.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=70.203,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00457.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=76.209,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00458.ts
+#EXT-X-CUE-OUT-CONT:CAID=0x0100,ElapsedTime=82.215,Duration=120,SCTE35=/DAuAAAAAAAAAP/wBQb/S8QThAAYAhZDVUVJBnRbwn/DAACky3UMAgEANAAAM1xNVg==
+#EXTINF:6.00600,
+20180419T043834/master-250/00005/master-250_00459.ts

@@ -1,1 +1,19 @@
-{"timestamp":1524077888860,"status":404,"error":"Not Found","message":"No message available","path":"/wssmobile/v1/video/cc/android/WiFi/VOD_Limelight/kDHnckA_T_qyA0p0HRNUhw.m3u8%0A"}
+#EXTM3U
+#EXT-X-VERSION:3
+## Created with Unified Streaming Platform(version=1.7.10llnw3.6.1.2)
+#EXT-X-STREAM-INF:BANDWIDTH=605782,CODECS="mp4a.40.2,avc1.77.30",RESOLUTION=640x360
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000-video=443493.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1
+#EXT-X-STREAM-INF:BANDWIDTH=135680,CODECS="mp4a.40.2"
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1
+#EXT-X-STREAM-INF:BANDWIDTH=295679,CODECS="mp4a.40.2,avc1.77.30",RESOLUTION=240x134
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000-video=150943.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1
+#EXT-X-STREAM-INF:BANDWIDTH=392022,CODECS="mp4a.40.2,avc1.77.30",RESOLUTION=320x180
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000-video=241833.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1
+#EXT-X-STREAM-INF:BANDWIDTH=874462,CODECS="mp4a.40.2,avc1.77.30",RESOLUTION=640x360
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000-video=696965.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1
+#EXT-X-STREAM-INF:BANDWIDTH=1403458,CODECS="mp4a.40.2,avc1.77.31",RESOLUTION=1280x720
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000-video=1196017.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1
+#EXT-X-STREAM-INF:BANDWIDTH=2014678,CODECS="mp4a.40.2,avc1.77.31",RESOLUTION=1280x720
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000-video=1772640.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1
+#EXT-X-STREAM-INF:BANDWIDTH=2621755,CODECS="mp4a.40.2,avc1.77.31",RESOLUTION=1280x720
+https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4-audio=128000-video=2345354.m3u8?base_path=https://bbgvod-vodproduseast.lldns.net/m/NzQ3NjEwMg/MjQ4MTY3NQ/wtn_putin3p_041118_,70,15,24,44,120,180,240,0.mp4.csmil/&fragment_duration=6000&scale=1000&hls_client_manifest_version=3&hdcore=1

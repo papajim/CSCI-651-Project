@@ -4,13 +4,14 @@ import os
 import glob
 import json
 import requests
+import wget
 
-providers = ['video.foxnews.com']
-#             'www.bloomberg.com',
-#             'www.cnbc.com',
-#             'www.huffingtonpost.com',
-#             'www.nbcolympics.com',
-#             'www.nytimes.com',
+providers = ['video.foxnews.com',
+             'www.bloomberg.com',
+             'www.cnbc.com',
+             'www.huffingtonpost.com',
+             'www.nbcolympics.com',
+             'www.nytimes.com']
 #             'www.usatoday.com',
 #             'www.wsj.com',
 #             'www.cbssports.com',
@@ -25,6 +26,8 @@ providers = ['video.foxnews.com']
 #             'www.nhl.com',
 
 for provider in providers:
+    print provider
+
     provider_info = {}
     protocols = set()
     bitrates_list = []
@@ -49,8 +52,10 @@ for provider in providers:
         resolutions = set()
         chunksize = set()
 
-        if os.stat(f).st_size == 0 or f.endswith('.out'):
+        if os.stat(f).st_size == 0 or f.endswith('.out') or f.endswith('.sh'):
             continue
+        
+        print f
 
         if f.endswith('.m3u8'):
             protocols.add('HLS')
@@ -78,36 +83,60 @@ for provider in providers:
                         resolutions.add(value)
                     elif stats[k].startswith('CODECS'):
                         if k < len(stats) - 1:
-                            stats[k] += "," + stats[len(stats)-1]
+                            stats[k] += "," + stats[k+1]
                         value = stats[k].split('=')[1]
                         value = value.replace('\n', '')
                         value = value.replace('"', '')
                         codec_list.add(value)
+                        k+=1
                         #if not ',' in value:
                         #    audio_only_streams += 1
-            elif not line.startswith('#') and not line == "":
+            elif line.strip() and not line.startswith('#'):
                 sub_manifest = None
-                if line.startswith('http'):
-                    cdn_start = line.find('//')
-                    cdn_stop = line.find('/', cdn_start+2)
-                    cdn = line[cdn_start+2:cdn_stop]
-                    cdn_list.add(cdn)
-                    sub_manifest = requests.get(line).text
-                    #print sub_manifest
-                #else:
-                    #not yet implented
+                url = line
+                
+                if not line.startswith('http'):
+                    logfile = f[:f.rfind('.')]+'.out'
+                    with open(logfile, 'r') as g:
+                        loglines = g.readlines()
+                    
+                    for logrecord in loglines:
+                        if '.m3u8' in logrecord:
+                            url = logrecord[:logrecord.find('.m3u8')+5]
+                            break
+
+                cdn_start = url.find('//')
+                cdn_stop = url.find('/', cdn_start+2)
+                cdn = url[cdn_start+2:cdn_stop]
+                cdn_list.add(cdn)
+
+                if os.path.isfile('index.m3u8'): os.remove('index.m3u8')
+                    
+                wget.download(url, 'index.m3u8')
+                    
+                if os.path.isfile('index.m3u8') and os.stat('index.m3u8').st_size > 0:
+                    with open('index.m3u8', 'r') as g:
+                        sub_manifest = g.readlines()
+                else:
+                    print "Failed to retrieve sub manifest file"
+                    
+                #print sub_manifest
 
                 if sub_manifest is None:
                     #print f
                     print "Sub Manifest file is not defined"
-                    exit()
+                    continue
+                    #exit()
 
-                sub_manifest = sub_manifest.split("\n")
+                #sub_manifest = sub_manifest.split("\n")
                 for record in sub_manifest:
                     if record.startswith('#EXT-X-VERSION'):
                         hls_version_list.add(int(record.split(':')[1]))
                     elif record.startswith('#EXTINF'):
-                        chunksize.add(float(record.split(':')[1][:-1]))
+                        value = record.split(':')[1]
+                        value = value.split(',')[0]
+                        #print value
+                        chunksize.add(float(value))
 
         bitrates_list.append(bitrates)
         bitrates_avg_list.append(bitrates_avg)

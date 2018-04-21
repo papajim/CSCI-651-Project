@@ -741,6 +741,9 @@
     "foxnews-f.akamaihd.net", 
     "securemedia-vh.akamaihd.net"
   ], 
+  "chunk_targetduration": [
+    10.0
+  ], 
   "chunksize_list": [
     [
       9.51, 
@@ -787,7 +790,10 @@
       8.008, 
       5.203
     ], 
-    [], 
+    [
+      1.158, 
+      10.0
+    ], 
     [], 
     [
       9.876, 
@@ -1118,6 +1124,7 @@
   "chunksize_list_distinct": [
     0.067, 
     0.867, 
+    1.158, 
     1.452, 
     1.6, 
     2.141, 

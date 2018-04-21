@@ -11,16 +11,17 @@ providers = ['video.foxnews.com',
              'www.cnbc.com',
              'www.huffingtonpost.com',
              'www.nbcolympics.com',
-             'www.nytimes.com']
-#             'www.usatoday.com',
-#             'www.wsj.com',
+             'www.nytimes.com',
+             'www.usatoday.com',
+             'www.wsj.com',
+             'www.cnn.com',
+             'www.espn.com']
+providers = ['www.nba.com',
+             'www.premierleague.com',
+             'www.weather.com',
+             'www.wwe.com']
+providers = ['www.weather.com']
 #             'www.cbssports.com',
-#             'www.cnn.com',
-#             'www.espn.com',
-#             'www.nba.com',
-#             'www.premierleague.com',
-#             'www.weather.com',
-#             'www.wwe.com']
 #             'www.cricbuzz.com',
 #             'www.bbc.com',
 #             'www.nhl.com',
@@ -42,6 +43,7 @@ for provider in providers:
     chunksize_list = []
     chunksize_list_distinct = []
     hls_version_list = set()
+    chunk_targetduration = set()
 
     input_folder = 'data/' + provider
     dirlist = glob.glob(input_folder+'/*')
@@ -102,8 +104,12 @@ for provider in providers:
                     
                     for logrecord in loglines:
                         if '.m3u8' in logrecord:
+                        #if logrecord.strip().endswith('.m3u8'):
                             url = logrecord[:logrecord.find('.m3u8')+5]
+                            url = url[:url.rfind('/')+1] + line
                             break
+
+                print url
 
                 cdn_start = url.find('//')
                 cdn_stop = url.find('/', cdn_start+2)
@@ -132,6 +138,8 @@ for provider in providers:
                 for record in sub_manifest:
                     if record.startswith('#EXT-X-VERSION'):
                         hls_version_list.add(int(record.split(':')[1]))
+                    elif record.startswith('#EXT-X-TARGETDURATION'):
+                        chunk_targetduration.add(float(record.split(':')[1]))
                     elif record.startswith('#EXTINF'):
                         value = record.split(':')[1]
                         value = value.split(',')[0]
@@ -173,6 +181,7 @@ for provider in providers:
     provider_info['chunksize_list'] = chunksize_list
     provider_info['chunksize_list_distinct'] = chunksize_list_distinct
     provider_info['hls_version_list'] = list(hls_version_list)
+    provider_info['chunk_targetduration'] = list(chunk_targetduration)
 
     with open(provider+'.json', 'w+') as g:
         json.dump(provider_info, g, sort_keys=True, indent=2)

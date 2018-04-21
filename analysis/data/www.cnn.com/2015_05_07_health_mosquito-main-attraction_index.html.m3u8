@@ -1,0 +1,13 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=618000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://cnnios-f.akamaihd.net/i/cnn/big/health/2015/05/07/mosquito-twin-study-dna-london-elizabeth-cohen-orig.cnn_32575_ios_,440,650,840,1240,3000,.mp4.csmil/index_1_av.m3u8?null=0
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=423000,RESOLUTION=400x224,CODECS="avc1.66.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://cnnios-f.akamaihd.net/i/cnn/big/health/2015/05/07/mosquito-twin-study-dna-london-elizabeth-cohen-orig.cnn_32575_ios_,440,650,840,1240,3000,.mp4.csmil/index_0_av.m3u8?null=0
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=818000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://cnnios-f.akamaihd.net/i/cnn/big/health/2015/05/07/mosquito-twin-study-dna-london-elizabeth-cohen-orig.cnn_32575_ios_,440,650,840,1240,3000,.mp4.csmil/index_2_av.m3u8?null=0
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1208000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://cnnios-f.akamaihd.net/i/cnn/big/health/2015/05/07/mosquito-twin-study-dna-london-elizabeth-cohen-orig.cnn_32575_ios_,440,650,840,1240,3000,.mp4.csmil/index_3_av.m3u8?null=0
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2919000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://cnnios-f.akamaihd.net/i/cnn/big/health/2015/05/07/mosquito-twin-study-dna-london-elizabeth-cohen-orig.cnn_32575_ios_,440,650,840,1240,3000,.mp4.csmil/index_4_av.m3u8?null=0
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=38000,CODECS="mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://cnnios-f.akamaihd.net/i/cnn/big/health/2015/05/07/mosquito-twin-study-dna-london-elizabeth-cohen-orig.cnn_32575_ios_,440,650,840,1240,3000,.mp4.csmil/index_0_a.m3u8?null=0

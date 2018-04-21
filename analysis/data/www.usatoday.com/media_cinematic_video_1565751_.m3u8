@@ -1,0 +1,5 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=147000,RESOLUTION=476x270
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5158306964001&videoId=1813248463001
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=247000,RESOLUTION=476x270
+http://c.brightcove.com/services/mobile/streaming/index/rendition.m3u8?assetId=5158307174001&videoId=1813248463001

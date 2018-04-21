@@ -1,0 +1,5 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=706000,RESOLUTION=400x300
+http://foxnews-f.akamaihd.net/i/062808/062808_red_landham_F700.flv/index_0_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=56000,CODECS="mp4a.40.34"
+http://foxnews-f.akamaihd.net/i/062808/062808_red_landham_F700.flv/index_0_a.m3u8

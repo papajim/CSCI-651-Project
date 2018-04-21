@@ -1,0 +1,15 @@
+#EXTM3U
+#EXT-X-STREAM-INF:BANDWIDTH=1455000,RESOLUTION=768x432,CODECS="avc1.4d001f, mp4a.40.2",CLOSED-CAPTIONS="CC"
+http://winterolympics-vh.akamaihd.net/i/HD/video_sports/NBCU_Sports_Group_-_Olympics_Winter/46/799/222_xxx_4224_jimmyfallonfive_nbc1519365540267_,22,70,40,14,9,6,3,00k.mp4.csmil/index_3_av.m3u8?set-akamai-hls-revision=5
+#EXT-X-STREAM-INF:BANDWIDTH=2255000,RESOLUTION=1024x576,CODECS="avc1.4d001f, mp4a.40.2",CLOSED-CAPTIONS="CC"
+http://winterolympics-vh.akamaihd.net/i/HD/video_sports/NBCU_Sports_Group_-_Olympics_Winter/46/799/222_xxx_4224_jimmyfallonfive_nbc1519365540267_,22,70,40,14,9,6,3,00k.mp4.csmil/index_0_av.m3u8?set-akamai-hls-revision=5
+#EXT-X-STREAM-INF:BANDWIDTH=7056000,RESOLUTION=1920x1080,CODECS="avc1.640029, mp4a.40.2",CLOSED-CAPTIONS="CC"
+http://winterolympics-vh.akamaihd.net/i/HD/video_sports/NBCU_Sports_Group_-_Olympics_Winter/46/799/222_xxx_4224_jimmyfallonfive_nbc1519365540267_,22,70,40,14,9,6,3,00k.mp4.csmil/index_1_av.m3u8?set-akamai-hls-revision=5
+#EXT-X-STREAM-INF:BANDWIDTH=4057000,RESOLUTION=1280x720,CODECS="avc1.640029, mp4a.40.2",CLOSED-CAPTIONS="CC"
+http://winterolympics-vh.akamaihd.net/i/HD/video_sports/NBCU_Sports_Group_-_Olympics_Winter/46/799/222_xxx_4224_jimmyfallonfive_nbc1519365540267_,22,70,40,14,9,6,3,00k.mp4.csmil/index_2_av.m3u8?set-akamai-hls-revision=5
+#EXT-X-STREAM-INF:BANDWIDTH=954000,RESOLUTION=640x360,CODECS="avc1.4d001f, mp4a.40.2",CLOSED-CAPTIONS="CC"
+http://winterolympics-vh.akamaihd.net/i/HD/video_sports/NBCU_Sports_Group_-_Olympics_Winter/46/799/222_xxx_4224_jimmyfallonfive_nbc1519365540267_,22,70,40,14,9,6,3,00k.mp4.csmil/index_4_av.m3u8?set-akamai-hls-revision=5
+#EXT-X-STREAM-INF:BANDWIDTH=654000,RESOLUTION=512x288,CODECS="avc1.4d001f, mp4a.40.2",CLOSED-CAPTIONS="CC"
+http://winterolympics-vh.akamaihd.net/i/HD/video_sports/NBCU_Sports_Group_-_Olympics_Winter/46/799/222_xxx_4224_jimmyfallonfive_nbc1519365540267_,22,70,40,14,9,6,3,00k.mp4.csmil/index_5_av.m3u8?set-akamai-hls-revision=5
+#EXT-X-STREAM-INF:BANDWIDTH=354000,RESOLUTION=384x216,CODECS="avc1.4d001f, mp4a.40.2",CLOSED-CAPTIONS="CC"
+http://winterolympics-vh.akamaihd.net/i/HD/video_sports/NBCU_Sports_Group_-_Olympics_Winter/46/799/222_xxx_4224_jimmyfallonfive_nbc1519365540267_,22,70,40,14,9,6,3,00k.mp4.csmil/index_6_av.m3u8?set-akamai-hls-revision=5

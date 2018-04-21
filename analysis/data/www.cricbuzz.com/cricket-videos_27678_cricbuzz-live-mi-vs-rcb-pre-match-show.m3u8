@@ -1,0 +1,16 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=0,BANDWIDTH=428000,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=432x240
+https://secure-playlist.livestream.com/streams/26005112_8146284_lsidp8fgphmf6uecc1a_1/media/26005112_8146284_lsidp8fgphmf6uecc1a_1@428000pb.m3u8?end=1451&start=0&storage=iss&token=1524431643_dbd1b9503ba616d3cf8b181c3be7fd1f71e343e8&ts=1524258000
+#EXT-X-STREAM-INF:PROGRAM-ID=0,BANDWIDTH=428000,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=432x240
+https://secure-playlist.livestream.com/streams/26005112_8146284_lsidp8fgphmf6uecc1a_1/media/26005112_8146284_lsidp8fgphmf6uecc1a_1@428000p.m3u8?end=1451&start=0&storage=iss&token=1524431643_8dff4675917dd6d854bbb104ad1fda429b7c9fd9&ts=1524258000
+#EXT-X-STREAM-INF:PROGRAM-ID=0,BANDWIDTH=1628000,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=853x480
+https://secure-playlist.livestream.com/streams/26005112_8146284_lsidp8fgphmf6uecc1a_1/media/26005112_8146284_lsidp8fgphmf6uecc1a_1@1628000p.m3u8?end=1451&start=0&storage=iss&token=1524431643_80c74030fb609c30de5bdc7934c0a21db03137d9&ts=1524258000
+#EXT-X-STREAM-INF:PROGRAM-ID=0,BANDWIDTH=678000,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=640x360
+https://secure-playlist.livestream.com/streams/26005112_8146284_lsidp8fgphmf6uecc1a_1/media/26005112_8146284_lsidp8fgphmf6uecc1a_1@678000p.m3u8?end=1451&start=0&storage=iss&token=1524431643_d9a2bb9a63afbacf7e951db80a44e52e98d0d64a&ts=1524258000
+#EXT-X-STREAM-INF:PROGRAM-ID=0,BANDWIDTH=2128000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=1280x720
+https://secure-playlist.livestream.com/streams/26005112_8146284_lsidp8fgphmf6uecc1a_1/media/26005112_8146284_lsidp8fgphmf6uecc1a_1@2128000pb.m3u8?end=1451&start=0&storage=iss&token=1524431643_53c70a40205a81ef17cf4b96226d473000706410&ts=1524258000
+#EXT-X-STREAM-INF:PROGRAM-ID=0,BANDWIDTH=2128000,CODECS="avc1.4d401f,mp4a.40.2",RESOLUTION=1280x720
+https://secure-playlist.livestream.com/streams/26005112_8146284_lsidp8fgphmf6uecc1a_1/media/26005112_8146284_lsidp8fgphmf6uecc1a_1@2128000p.m3u8?end=1451&start=0&storage=iss&token=1524431643_ed764fcec233fb17594628e8acbc71c8ed06e87f&ts=1524258000
+#EXT-X-STREAM-INF:PROGRAM-ID=0,BANDWIDTH=678000,CODECS="avc1.4d401e,mp4a.40.2",RESOLUTION=640x360
+https://secure-playlist.livestream.com/streams/26005112_8146284_lsidp8fgphmf6uecc1a_1/media/26005112_8146284_lsidp8fgphmf6uecc1a_1@678000pb.m3u8?end=1451&start=0&storage=iss&token=1524431643_3739d6ae3a8cadc47ab53afb516989da77c42f8e&ts=1524258000

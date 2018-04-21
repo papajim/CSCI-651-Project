@@ -1,0 +1,17 @@
+#EXTM3U
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=466000,RESOLUTION=416x234,CODECS="avc1.66.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_0_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=172000,RESOLUTION=416x234,CODECS="avc1.66.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_1_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=263000,RESOLUTION=416x234,CODECS="avc1.66.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_2_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=667000,RESOLUTION=640x360,CODECS="avc1.66.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_3_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1266000,RESOLUTION=640x360,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_4_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1868000,RESOLUTION=960x540,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_5_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2565000,RESOLUTION=1280x720,CODECS="avc1.77.30, mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_6_av.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=63000,CODECS="mp4a.40.2",CLOSED-CAPTIONS=NONE
+https://wsjvod-i.akamaihd.net/i/video/20131031/1101assistantnewsy/1101assistantnewsy_v2_ec,464,174,264,664,1264,1864,2564,k.mp4.csmil/index_1_a.m3u8

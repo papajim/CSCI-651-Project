@@ -1,0 +1,16 @@
+#seq provider distinct_resolutions
+1 usatoday 12
+2 cnbc 4
+3 nytimes 12
+4 premierleague 6
+5 espn 7
+6 wsj 5
+7 bbc 4
+8 foxnews 8
+9 wwe 6
+10 huffingtonpost 12
+11 weather 8
+12 bloomberg 4
+13 cnn 4
+14 nba 8
+15 nbcolympics 8

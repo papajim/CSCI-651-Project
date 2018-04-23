@@ -156,6 +156,41 @@ def create_chunk_targetduration_bar_plot(provider_info):
     return
 
 def create_resolution_bar_plot(provider_info):
+    distinct_res_count = {}
+    total_providers = len(provider_info.keys())
+    with open('plot_inputs/resolution_bar_plot1.in', 'w+') as g:
+        g.write("#seq provider avg_resolution_num\n")
+        counter = 1
+        for provider in provider_info:
+            total_res = 0
+            for resolutions in provider_info[provider]['resolutions_list']:
+                total_res += len(resolutions)
+
+            avg_num_of_resolutions = 1.0*total_res/(1.0*len(provider_info[provider]['resolutions_list']))
+
+            g.write("%d %s %0.2f\n" % (counter, provider, avg_num_of_resolutions))
+            counter += 1
+
+    with open('plot_inputs/resolution_bar_plot2.in', 'w+') as g:
+        g.write("#seq provider distinct_resolutions\n")
+        counter = 1
+        for provider in provider_info:
+            g.write("%d %s %d\n" % (counter, provider, len(provider_info[provider]['resolutions_list_distinct'])))
+            counter += 1
+        
+            for res in provider_info[provider]['resolutions_list_distinct']:
+                if res in distinct_res_count:
+                    distinct_res_count[res] += 1
+                else:
+                    distinct_res_count[res] = 1
+
+    with open('plot_inputs/resolution_bar_plot3.in', 'w+') as g:
+        g.write("#seq resolution percentage_of_providers\n")
+        counter = 1
+
+        for res in sorted(distinct_res_count.items(), key=operator.itemgetter(1)):
+            g.write("%d %s %.2f\n" % (counter, res[0], (res[1]*1.0)/(total_providers*1.0)*100))
+            counter += 1
     
     return
 
@@ -176,3 +211,4 @@ create_bitrate_box_plot(provider_info)
 create_codec_bar_plot(provider_info)
 create_cdn_bar_plot(provider_info)
 create_chunk_targetduration_bar_plot(provider_info)
+create_resolution_bar_plot(provider_info)

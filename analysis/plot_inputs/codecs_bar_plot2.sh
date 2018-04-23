@@ -17,7 +17,7 @@ gnuplot<<EOC
     set ylabel 'Providers'
     set xlabel 'Codecs' offset 0, -6.5
 
-    set yrange [0:7]
+    set yrange [0:8]
 
     plot 'codecs_bar_plot2.in' using 1:3:xtic(2) notitle with boxes
 EOC

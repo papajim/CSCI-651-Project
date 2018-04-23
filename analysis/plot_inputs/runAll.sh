@@ -6,3 +6,5 @@
 ./cdn_bar_plot2.sh
 ./codecs_bar_plot1.sh
 ./codecs_bar_plot2.sh
+./chunk_targetduration_bar_plot1.sh
+./chunk_targetduration_bar_plot2.sh

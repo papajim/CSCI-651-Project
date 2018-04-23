@@ -130,9 +130,33 @@ def create_cdn_bar_plot(provider_info):
     return
 
 def create_chunk_targetduration_bar_plot(provider_info):
+    target_durations = {}
+    total_providers = len(provider_info.keys())
+    
+    with open('plot_inputs/chunk_targetduration_bar_plot1.in', 'w+') as g:
+        g.write("#seq provider distinct_chunks\n")
+        counter = 1
+        for provider in provider_info:
+            g.write("%d %s %d\n" % (counter, provider, len(provider_info[provider]['chunk_targetduration'])))
+            for target in provider_info[provider]['chunk_targetduration']:
+                if float(target) in target_durations:
+                    target_durations[float(target)] += 1
+                else:
+                    target_durations[float(target)] = 1    
+            counter += 1
+
+    with open('plot_inputs/chunk_targetduration_bar_plot2.in', 'w+') as g:
+        g.write("#seq chunk_duration percentage_of_providers\n")
+        counter = 1
+
+        for duration in sorted(target_durations.items(), key=operator.itemgetter(0)):
+            g.write("%d %.2f %.2f\n" % (counter, duration[0], (duration[1]*1.0)/(total_providers*1.0)*100))
+            counter += 1
+
     return
 
 def create_resolution_bar_plot(provider_info):
+    
     return
 
 def create_protocol_bar_plot(provider_info):
@@ -147,7 +171,8 @@ for f in dirlist:
     with open(f, 'r') as g:
         provider_info[provider] = json.load(g)
 
-create_cdn_bar_plot(provider_info)
 create_bitrate_bar_plot(provider_info)
 create_bitrate_box_plot(provider_info)
 create_codec_bar_plot(provider_info)
+create_cdn_bar_plot(provider_info)
+create_chunk_targetduration_bar_plot(provider_info)

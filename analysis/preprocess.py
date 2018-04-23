@@ -27,6 +27,7 @@ providers = ['www.weather.com']
 #             'www.bbc.com',
 #             'www.nhl.com',
 providers = ['www.bbc.com']
+providers = ['www.usatoday.com']
 
 for provider in providers:
     print provider
@@ -68,6 +69,12 @@ for provider in providers:
             with open(f, "r") as g:
                 lines = g.readlines()
 
+            if provider == 'www.usatoday.com' and len(lines) == 3:
+                if os.path.isfile('master.m3u8'): os.remove('master.m3u8')
+                wget.download(lines[-1], 'master.m3u8')
+                with open("master.m3u8", "r") as g:
+                    lines = g.readlines()
+
             for line in lines:
                 if line.startswith('#EXT-X-STREAM-INF'):
                     stats = line[line.find(':')+1:].split(',')
@@ -83,6 +90,7 @@ for provider in providers:
                             value = stats[k].split('=')[1].replace('\n', '')
                             resolutions.add(value)
                         elif stats[k].startswith('CODECS'):
+                            print stats[k]
                             if k < len(stats) - 1:
                                 stats[k] += "," + stats[k+1]
                             value = stats[k].split('=')[1]

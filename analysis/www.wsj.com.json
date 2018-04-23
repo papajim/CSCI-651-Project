@@ -869,7 +869,7 @@
   ], 
   "codec_list": [
     "avc1.66.30, mp4a.40.2", 
-    "mp4a.40.2,CLOSED-CAPTIONS", 
+    "mp4a.40.2", 
     "avc1.77.30, mp4a.40.2"
   ], 
   "hls_version_list": [

@@ -69,7 +69,7 @@ def create_codec_bar_plot(provider_info):
         g.write("#seq codec num_of_providers\n")
         counter = 1
         for codec in codecs_usage:
-            g.write("%d %s %d\n" % (counter, codec, codecs_usage[codec]))
+            g.write("%d %s %d\n" % (counter, codec.replace(' ', ''), codecs_usage[codec]))
             counter += 1
         
     return
@@ -123,7 +123,7 @@ def create_cdn_bar_plot(provider_info):
         counter = 1
 
         for cdn in cdn_usage:
-            g.write("%d %s %.2f" % (counter, cdn, (cdn_usage[cdn]*1.0)/(total_providers*1.0)*100))
+            g.write("%d %s %.2f\n" % (counter, cdn, (cdn_usage[cdn]*1.0)/(total_providers*1.0)*100))
             counter += 1
     return
 

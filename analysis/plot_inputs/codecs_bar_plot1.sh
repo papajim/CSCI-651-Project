@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-jpeg="codecs_bar_plot.jpg"
+jpeg="codecs_bar_plot1.jpg"
 
 gnuplot<<EOC
     reset
@@ -14,10 +14,12 @@ gnuplot<<EOC
     set xtics rotate by 45 right
     set xtics center offset 0,-2
     
-    set title 'Number of codecs used per content provider'
+    set title 'Number of codecs used per provider'
     set ylabel 'Number of codecs'
     set xlabel 'Providers' offset 0, -3
 
-    plot 'codecs_bar_plot.in' using 3:xtic(2) title "audio only", \
+    set yrange [0:10]
+
+    plot 'codecs_bar_plot1.in' using 3:xtic(2) title "audio only", \
         '' using 4 title "video"
 EOC

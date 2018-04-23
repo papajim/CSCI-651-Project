@@ -1,6 +1,6 @@
 #seq cdn percentage_of_providers
-1 Limelight 13.33
-2 Fastly 20.00
-3 AmazonAWS 6.67
-4 Akamai 73.33
-5 Brightcove 13.33
+1 AmazonAWS 6.67
+2 Limelight 13.33
+3 Brightcove 13.33
+4 Fastly 20.00
+5 Akamai 73.33

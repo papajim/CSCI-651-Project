@@ -4,6 +4,7 @@ import os
 import json
 import glob
 import socket
+import operator
 from ipwhois import IPWhois
 
 def create_bitrate_bar_plot(provider_info):
@@ -123,8 +124,8 @@ def create_cdn_bar_plot(provider_info):
         g.write("#seq cdn percentage_of_providers\n")
         counter = 1
 
-        for cdn in cdn_usage:
-            g.write("%d %s %.2f\n" % (counter, cdn, (cdn_usage[cdn]*1.0)/(total_providers*1.0)*100))
+        for cdn in sorted(cdn_usage.items(), key=operator.itemgetter(1)):
+            g.write("%d %s %.2f\n" % (counter, cdn[0], (cdn[1]*1.0)/(total_providers*1.0)*100))
             counter += 1
     return
 

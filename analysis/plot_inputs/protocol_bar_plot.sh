@@ -17,7 +17,7 @@ gnuplot<<EOC
     set ylabel 'Number of providers'
     set xlabel 'Protocols'
 
-    set yrange [0:10]
+    set yrange [0:12]
 
     plot 'protocol_bar_plot.in' using 1:3:xtic(2) notitle with boxes
 EOC

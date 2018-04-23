@@ -11,3 +11,4 @@
 ./resolution_bar_plot1.sh
 ./resolution_bar_plot2.sh
 ./resolution_bar_plot3.sh
+./protocol_bar_plot.sh

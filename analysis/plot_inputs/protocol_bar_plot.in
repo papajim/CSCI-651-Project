@@ -1,0 +1,6 @@
+#seq protocol num_of_providers
+1 MPEG-DASH 1
+2 Flash 2
+3 HLS 2
+4 HLS.v4 2
+5 HLS.v3 11

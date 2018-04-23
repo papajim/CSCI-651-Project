@@ -626,7 +626,9 @@
   "cdn_list": [
     "hlsrv.vidible.tv"
   ], 
-  "chunk_targetduration": [], 
+  "chunk_targetduration": [
+    4
+  ], 
   "chunksize_list": [
     [], 
     [], 

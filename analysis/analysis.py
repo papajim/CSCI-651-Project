@@ -195,6 +195,40 @@ def create_resolution_bar_plot(provider_info):
     return
 
 def create_protocol_bar_plot(provider_info):
+    protocols_used = {}
+
+    for provider in provider_info:
+        if len(provider_info[provider]['protocols']) > 1:
+            print "Protocols more than 1"
+
+        for ver in provider_info[provider]['hls_version_list']:
+            protocol = provider_info[provider]['protocols'][0]
+            protocol += ".v" + str(ver)
+            #print "%s: %s" % (provider, protocol)
+            if protocol in protocols_used:
+                protocols_used[protocol] += 1
+            else:
+                protocols_used[protocol] = 1
+
+        if len(provider_info[provider]['hls_version_list']) == 0:
+            protocol = provider_info[provider]['protocols'][0]
+            #print "%s: %s" % (provider, protocol)
+            if protocol in protocols_used:
+                protocols_used[protocol] += 1
+            else:
+                protocols_used[protocol] = 1
+
+    # hardcoded for bbc and fifa
+    protocols_used['Flash'] = 2
+
+    with open('plot_inputs/protocol_bar_plot.in', 'w+') as g:
+        g.write("#seq protocol num_of_providers\n")
+        counter = 1
+        
+        for proto in sorted(protocols_used.items(), key=operator.itemgetter(1)):
+            g.write("%d %s %d\n" % (counter, proto[0], proto[1]))
+            counter += 1
+
     return
 
 
@@ -212,3 +246,4 @@ create_codec_bar_plot(provider_info)
 create_cdn_bar_plot(provider_info)
 create_chunk_targetduration_bar_plot(provider_info)
 create_resolution_bar_plot(provider_info)
+create_protocol_bar_plot(provider_info)

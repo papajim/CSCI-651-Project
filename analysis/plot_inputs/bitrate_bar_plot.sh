@@ -13,9 +13,11 @@ gnuplot<<EOC
     set xtics rotate by 45 right
     set xtics center offset 0,-2
     
-    set title 'Total number of offered bitrates by content provider'
-    set ylabel 'Number of Bitrates'
+    set title 'Average number of offered bitrates per video'
+    set ylabel 'Average number of bitrates'
     set xlabel 'Providers' offset 0, -3
+
+    set yrange [0:10]
 
     plot 'bitrate_bar_plot.in' using 1:3:xtic(2) notitle with boxes
 EOC

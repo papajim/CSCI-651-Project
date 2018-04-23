@@ -8,10 +8,11 @@ from ipwhois import IPWhois
 
 def create_bitrate_bar_plot(provider_info):
     with open('plot_inputs/bitrate_bar_plot.in', 'w+') as g:
-        g.write("#seq provider bitrate_num\n")
+        g.write("#seq provider avg_bitrate_num\n")
         counter = 1
         for provider in provider_info:
-            g.write("%d %s %d\n" % (counter, provider, len(provider_info[provider]['bitrates_total'])))
+            avg_num_of_bitrates = 1.0*len(provider_info[provider]['bitrates_total'])/(1.0*len(provider_info[provider]['bitrates_list']))
+            g.write("%d %s %0.2f\n" % (counter, provider, avg_num_of_bitrates))
             counter += 1
     return
 

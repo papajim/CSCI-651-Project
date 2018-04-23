@@ -1056,13 +1056,13 @@
   ], 
   "codec_list": [
     "avc1.4d401f,mp4a.40.2", 
-    "mp4a.40.2,avc1.77.30", 
+    "avc1.77.30,mp4a.40.2",
     "avc1.77.30, mp4a.40.2", 
     "avc1.4d400d,mp4a.40.5", 
     "mp4a.40.2", 
     "avc1.4d400c,mp4a.40.5", 
     "avc1.4d4016,mp4a.40.2", 
-    "mp4a.40.2,avc1.77.31", 
+    "avc1.77.31,mp4a.40.2",
     "mp4a.40.2"
   ], 
   "hls_version_list": [

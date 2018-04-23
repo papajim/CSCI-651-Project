@@ -68,7 +68,7 @@ def create_codec_bar_plot(provider_info):
     with open('plot_inputs/codecs_bar_plot2.in', 'w+') as g:
         g.write("#seq codec num_of_providers\n")
         counter = 1
-        for codec in codecs_usage:
+        for codec in sorted(codecs_usage.keys()):
             g.write("%d %s %d\n" % (counter, codec.replace(' ', ''), codecs_usage[codec]))
             counter += 1
         

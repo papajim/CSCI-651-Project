@@ -4,7 +4,7 @@ jpeg="resolution_bar_plot2.jpg"
 
 gnuplot<<EOC
     reset
-    set terminal jpeg size 1024,768
+    set terminal jpeg size 1024,768 font "Calibri,18"
     set output "$jpeg"
     set style fill solid 0.5 border -1
     set boxwidth  0.5

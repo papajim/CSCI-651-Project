@@ -4,7 +4,7 @@ jpeg="bitrate_box_plot.jpg"
 
 gnuplot<<EOC
     reset
-    set terminal jpeg size 1024,768
+    set terminal jpeg size 1024,768 font "Calibri,18"
     set output "$jpeg"
     set style fill solid 0.5 border -1
     set style boxplot outliers pointtype 7

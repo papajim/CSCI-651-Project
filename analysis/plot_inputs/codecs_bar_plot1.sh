@@ -4,7 +4,7 @@ jpeg="codecs_bar_plot1.jpg"
 
 gnuplot<<EOC
     reset
-    set terminal jpeg size 1024,768
+    set terminal jpeg size 1024,768 font "Calibri,18"
     set output "$jpeg"
     set style data histogram
     set style histogram rowstacked

@@ -1,0 +1,799 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{paytv}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Abrahamsson}{A.}%
+     {Henrik}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nordmark}{N.}%
+     {Mattias}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AHNM1}
+  \strng{fullhash}{AHNM1}
+  \field{sortinit}{A}
+  \field{booktitle}{Proceedings of the 2012 Internet Measurement Conference}
+  \field{series}{IMC '12}
+  \field{title}{Program Popularity and Viewer Behaviour in a Large TV-on-demand
+  System}
+  \list{location}{1}{%
+    {Boston, Massachusetts, USA}%
+  }
+  \field{year}{2012}
+\endentry
+
+\entry{netflix}{article}{}
+  \name{author}{7}{}{%
+    {{}%
+     {Adhikari}{A.}%
+     {Vijay~K.}{V.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Guo}{G.}%
+     {Yang}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hao}{H.}%
+     {Fang}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hilt}{H.}%
+     {Volker}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Zhi-Li}{Z.-L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Varvello}{V.}%
+     {Matteo}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Steiner}{S.}%
+     {Moritz}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AVKGYHFHVZZLVMSM1}
+  \strng{fullhash}{AVKGYHFHVZZLVMSM1}
+  \field{sortinit}{A}
+  \field{number}{6}
+  \field{title}{Measurement Study of Netflix, Hulu, and a Tale of Three CDNs}
+  \field{volume}{23}
+  \field{journaltitle}{IEEE/ACM Trans. Netw.}
+  \field{month}{12}
+  \field{year}{2015}
+\endentry
+
+\entry{Adhikari10}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Adhikari}{A.}%
+     {Vijay~Kumar}{V.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jain}{J.}%
+     {Sourabh}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Zhi-Li}{Z.-L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AVKJSZZL1}
+  \strng{fullhash}{AVKJSZZL1}
+  \field{sortinit}{A}
+  \field{booktitle}{Proceedings of the 10th ACM SIGCOMM Conference on Internet
+  Measurement}
+  \field{isbn}{978-1-4503-0483-2}
+  \field{series}{IMC '10}
+  \field{title}{YouTube Traffic Dynamics and Its Interplay with a Tier-1 ISP:
+  An ISP Perspective}
+  \list{location}{1}{%
+    {Melbourne, Australia}%
+  }
+  \field{year}{2010}
+\endentry
+
+\entry{hds}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Adobe}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{note}{\url{www.adobe.com/products/hds-dynamic-streaming.html.}}
+  \field{title}{{Adobe HTTP Dynamic Streaming}}
+\endentry
+
+\entry{hls}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Apple}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{A2}
+  \strng{fullhash}{A2}
+  \field{sortinit}{A}
+  \field{note}{\url{https://developer.apple.com/streaming/.}}
+  \field{title}{{Apple’s HTTP Live Streaming}}
+\endentry
+
+\entry{mattgoogle}{inproceedings}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Calder}{C.}%
+     {Matt}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fan}{F.}%
+     {Xun}{X.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hu}{H.}%
+     {Zi}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Katz-Bassett}{K.-B.}%
+     {Ethan}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Heidemann}{H.}%
+     {John}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Govindan}{G.}%
+     {Ramesh}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CMFXHZKBEHJGR1}
+  \strng{fullhash}{CMFXHZKBEHJGR1}
+  \field{sortinit}{C}
+  \field{booktitle}{Proceedings of the 2013 Conference on Internet Measurement
+  Conference}
+  \field{series}{IMC '13}
+  \field{title}{Mapping the Expansion of Google's Serving Infrastructure}
+  \list{location}{1}{%
+    {Barcelona, Spain}%
+  }
+  \field{year}{2013}
+\endentry
+
+\entry{ChromeRemoteInterface}{misc}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Cardaci}{C.}%
+     {Andrea}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sidorov}{S.}%
+     {Andrey}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cochard}{C.}%
+     {Greg}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CASACG1}
+  \strng{fullhash}{CASACG1}
+  \field{sortinit}{C}
+  \field{note}{\url{https://github.com/cyrus-and/chrome-remote-interface}}
+  \field{title}{{Chrome-Remote-Interface}}
+\endentry
+
+\entry{Cha07}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Cha}{C.}%
+     {Meeyoung}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kwak}{K.}%
+     {Haewoon}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rodriguez}{R.}%
+     {Pablo}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ahn}{A.}%
+     {Yong-Yeol}{Y.-Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Moon}{M.}%
+     {Sue}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CMKHRPAYYMS1}
+  \strng{fullhash}{CMKHRPAYYMS1}
+  \field{sortinit}{C}
+  \field{booktitle}{Proceedings of the 7th ACM SIGCOMM Conference on Internet
+  Measurement}
+  \field{isbn}{978-1-59593-908-1}
+  \field{series}{IMC '07}
+  \field{title}{I Tube, You Tube, Everybody Tubes: Analyzing the World's
+  Largest User Generated Content Video System}
+  \list{location}{1}{%
+    {San Diego, California, USA}%
+  }
+  \field{year}{2007}
+\endentry
+
+\entry{dash}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {DASH-IF}{D.-I.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DI1}
+  \strng{fullhash}{DI1}
+  \field{sortinit}{D}
+  \field{note}{\url{http://dashif.org/reference/players/javascript/1.4.0/samples/dash-if-reference-player/}}
+  \field{title}{{Dash.js}}
+\endentry
+
+\entry{upload}{inproceedings}{}
+  \name{author}{7}{}{%
+    {{}%
+     {Ding}{D.}%
+     {Yuan}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Du}{D.}%
+     {Yuan}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hu}{H.}%
+     {Yingkai}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Liu}{L.}%
+     {Zhengye}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Luqin}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ross}{R.}%
+     {Keith}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ghose}{G.}%
+     {Anindya}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DYDYHYLZWLRKGA1}
+  \strng{fullhash}{DYDYHYLZWLRKGA1}
+  \field{sortinit}{D}
+  \field{booktitle}{Proceedings of the 2011 ACM SIGCOMM Conference on Internet
+  Measurement Conference}
+  \field{series}{IMC '11}
+  \field{title}{Broadcast Yourself: Understanding YouTube Uploaders}
+  \field{year}{2011}
+\endentry
+
+\entry{ottgorilla}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Erman}{E.}%
+     {Jeffrey}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gerber}{G.}%
+     {Alexandre}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ramadrishnan}{R.}%
+     {K.~K.}{K.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sen}{S.}%
+     {Subhabrata}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Spatscheck}{S.}%
+     {Oliver}{O.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{EJGARKKSSSO1}
+  \strng{fullhash}{EJGARKKSSSO1}
+  \field{sortinit}{E}
+  \field{booktitle}{Proceedings of the 2011 ACM SIGCOMM Conference on Internet
+  Measurement Conference}
+  \field{series}{IMC '11}
+  \field{title}{Over the Top Video: The Gorilla in Cellular Networks}
+  \list{location}{1}{%
+    {Berlin, Germany}%
+  }
+  \field{year}{2011}
+\endentry
+
+\entry{sanjay11}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Finamore}{F.}%
+     {Alessandro}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mellia}{M.}%
+     {Marco}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Munaf\`{o}}{M.}%
+     {Maurizio~M.}{M.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Torres}{T.}%
+     {Ruben}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rao}{R.}%
+     {Sanjay~G.}{S.~G.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{FAMMMMMTRRSG1}
+  \strng{fullhash}{FAMMMMMTRRSG1}
+  \field{sortinit}{F}
+  \field{booktitle}{Proceedings of the 2011 ACM SIGCOMM Conference on Internet
+  Measurement Conference}
+  \field{series}{IMC '11}
+  \field{title}{YouTube Everywhere: Impact of Device and Infrastructure
+  Synergies on User Experience}
+  \list{location}{1}{%
+    {Berlin, Germany}%
+  }
+  \field{year}{2011}
+\endentry
+
+\entry{Gill07}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Gill}{G.}%
+     {Phillipa}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Arlitt}{A.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Zongpeng}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mahanti}{M.}%
+     {Anirban}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GPAMLZMA1}
+  \strng{fullhash}{GPAMLZMA1}
+  \field{sortinit}{G}
+  \field{booktitle}{Proceedings of the 7th ACM SIGCOMM Conference on Internet
+  Measurement}
+  \field{isbn}{978-1-59593-908-1}
+  \field{series}{IMC '07}
+  \field{title}{Youtube Traffic Characterization: A View from the Edge}
+  \list{location}{1}{%
+    {San Diego, California, USA}%
+  }
+  \field{year}{2007}
+\endentry
+
+\entry{BB}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Huang}{H.}%
+     {Te-Yuan}{T.-Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Johari}{J.}%
+     {Ramesh}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {McKeown}{M.}%
+     {Nick}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Trunnell}{T.}%
+     {Matthew}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Watson}{W.}%
+     {Mark}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HTYJRMNTMWM1}
+  \strng{fullhash}{HTYJRMNTMWM1}
+  \field{sortinit}{H}
+  \field{booktitle}{Proceedings of the 2014 ACM Conference on SIGCOMM}
+  \field{series}{SIGCOMM '14}
+  \field{title}{A Buffer-based Approach to Rate Adaptation: Evidence from a
+  Large Video Streaming Service}
+  \list{location}{1}{%
+    {Chicago, Illinois, USA}%
+  }
+  \field{year}{2014}
+\endentry
+
+\entry{alexa}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Inc.}{I.}%
+     {Alexa~Internet}{A.~I.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{IAI1}
+  \strng{fullhash}{IAI1}
+  \field{sortinit}{I}
+  \field{note}{\url{https://www.alexa.com/topsites}}
+  \field{title}{{Alexa Top 500}}
+\endentry
+
+\entry{ondemand}{inproceedings}{}
+  \name{author}{7}{}{%
+    {{}%
+     {Li}{L.}%
+     {Zhenyu}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lin}{L.}%
+     {Jiali}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Akodjenou}{A.}%
+     {Marc-Ismael}{M.-I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Xie}{X.}%
+     {Gaogang}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kaafar}{K.}%
+     {Mohamed~Ali}{M.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jin}{J.}%
+     {Yun}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Peng}{P.}%
+     {Gang}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LZLJAMIXGKMAJYPG1}
+  \strng{fullhash}{LZLJAMIXGKMAJYPG1}
+  \field{sortinit}{L}
+  \field{booktitle}{Proceedings of the 2012 Internet Measurement Conference}
+  \field{series}{IMC '12}
+  \field{title}{Watching Videos from Everywhere: A Study of the PPTV Mobile VoD
+  System}
+  \list{location}{1}{%
+    {Boston, Massachusetts, USA}%
+  }
+  \field{year}{2012}
+\endentry
+
+\entry{mss}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Microsoft}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{sortinit}{M}
+  \field{note}{\url{http://www.iis.net/downloads/microsoft/smooth-streaming}}
+  \field{title}{{Microsoft Smooth Streaming}}
+\endentry
+
+\entry{Googler}{misc}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Prakash~Jana}{P.~J.}%
+     {Arun}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hakkinen}{H.}%
+     {Henri}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Zhiming}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jenkins}{J.}%
+     {Johnathan}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lin}{L.}%
+     {SZ}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{PJAHHWZJJLS1}
+  \strng{fullhash}{PJAHHWZJJLS1}
+  \field{sortinit}{P}
+  \field{note}{\url{https://github.com/jarun/googler}}
+  \field{title}{{Googler}}
+\endentry
+
+\entry{periscope}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Siekkinen}{S.}%
+     {Matti}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Masala}{M.}%
+     {Enrico}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {K\"{a}m\"{a}r\"{a}inen}{K.}%
+     {Teemu}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SMMEKT1}
+  \strng{fullhash}{SMMEKT1}
+  \field{sortinit}{S}
+  \field{booktitle}{Proceedings of the 2016 Internet Measurement Conference}
+  \field{series}{IMC '16}
+  \field{title}{A First Look at Quality of Mobile Live Streaming Experience:
+  The Case of Periscope}
+  \list{location}{1}{%
+    {Santa Monica, California, USA}%
+  }
+  \field{year}{2016}
+\endentry
+
+\entry{Torres11}{inproceedings}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Torres}{T.}%
+     {Ruben}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Finamore}{F.}%
+     {Alessandro}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kim}{K.}%
+     {Jin~Ryong}{J.~R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mellia}{M.}%
+     {Marco}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Munafo}{M.}%
+     {Maurizio~M.}{M.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rao}{R.}%
+     {Sanjay}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TRFAKJRMMMMMRS1}
+  \strng{fullhash}{TRFAKJRMMMMMRS1}
+  \field{sortinit}{T}
+  \field{booktitle}{Proceedings of the 2011 31st International Conference on
+  Distributed Computing Systems}
+  \field{series}{ICDCS '11}
+  \field{title}{Dissecting Video Server Selection Strategies in the YouTube
+  CDN}
+  \field{year}{2011}
+\endentry
+
+\entry{ucsblive}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Wang}{W.}%
+     {Bolun}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Xinyi}{X.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Gang}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zheng}{Z.}%
+     {Haitao}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhao}{Z.}%
+     {Ben~Y.}{B.~Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WBZXWGZHZBY1}
+  \strng{fullhash}{WBZXWGZHZBY1}
+  \field{sortinit}{W}
+  \field{booktitle}{Proceedings of the 2016 Internet Measurement Conference}
+  \field{series}{IMC '16}
+  \field{title}{Anatomy of a Personalized Livestreaming System}
+  \list{location}{1}{%
+    {Santa Monica, California, USA}%
+  }
+  \field{year}{2016}
+\endentry
+
+\entry{prefixcounting}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Zhou}{Z.}%
+     {Jia}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Yanhua}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Adhikari}{A.}%
+     {Vijay~Kumar}{V.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Zhi-Li}{Z.-L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ZJLYAVKZZL1}
+  \strng{fullhash}{ZJLYAVKZZL1}
+  \field{sortinit}{Z}
+  \field{booktitle}{Proceedings of the 2011 ACM SIGCOMM Conference on Internet
+  Measurement Conference}
+  \field{isbn}{978-1-4503-1013-0}
+  \field{series}{IMC '11}
+  \field{title}{Counting YouTube Videos via Random Prefix Sampling}
+  \list{location}{1}{%
+    {Berlin, Germany}%
+  }
+  \field{year}{2011}
+\endentry
+
+\entry{Zink09}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Zink}{Z.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Suh}{S.}%
+     {Kyoungwon}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gu}{G.}%
+     {Yu}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kurose}{K.}%
+     {Jim}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ZMSKGYKJ1}
+  \strng{fullhash}{ZMSKGYKJ1}
+  \field{sortinit}{Z}
+  \field{title}{Characteristics of YouTube Network Traffic at a Campus Network
+  - Measurements, Models, and Implications}
+  \field{journaltitle}{Comput. Netw.}
+  \field{month}{03}
+  \field{year}{2009}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

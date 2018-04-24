@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-jpeg="codecs_bar_plot2.jpg"
+jpeg="codecs_bar_plot22.jpg"
 
 gnuplot<<EOC
     reset
@@ -10,14 +10,14 @@ gnuplot<<EOC
     set boxwidth  0.5
 
     set xtics rotate by 45 right
-    set xtics center offset 0,-4
-    set xtics font "Calibri, 10"
+    set xtics center offset 0,-3
+    set xtics font "Calibri, 15"
     
     set title 'Number of providers offering a codec'
     set ylabel 'Providers'
-    set xlabel 'Codecs' offset 0, -6.5
+    set xlabel 'Codecs' offset 0, -5
 
     set yrange [0:8]
 
-    plot 'codecs_bar_plot2.in' using 1:3:xtic(2) notitle with boxes
+    plot 'codecs_bar_plot22.in' using 1:3:xtic(2) notitle with boxes
 EOC

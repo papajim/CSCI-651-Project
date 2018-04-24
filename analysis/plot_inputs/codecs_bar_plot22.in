@@ -1,0 +1,11 @@
+#seq codec num_of_providers
+1 avc1.4d0015,mp4a.40.2 2
+2 avc1.4d001e,mp4a.40.2 2
+3 avc1.4d001f,mp4a.40.2 2
+4 avc1.4d401f,mp4a.40.2 3
+5 avc1.64001f,mp4a.40.2 2
+6 avc1.640028,mp4a.40.2 2
+7 avc1.640028,mp4a.40.2 2
+8 avc1.66.30,mp4a.40.2 7
+9 avc1.77.30,mp4a.40.2 7
+10 mp4a.40.2 7
